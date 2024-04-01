@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+.navsection {
+  display: flex;
+  background-color: rgb(54, 52, 180);
+  height: 80px;
+  color: white;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 20px;
+  font-size: large;
+}
+.sidbar-section {
+  width: 100%;
+  max-width: 15%;
+  background-color: lightgray;
+  height: 87vh;
+  padding-top: 10px;
+}
+.sidbar-section ul li {
+  list-style: none;
+  margin-bottom: 20px;
+  font-weight: 500;
+  font-size: medium;
+  cursor: pointer;
+}
+.collections-section {
+  display: flex;
+}
+.login-section,
+.register-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.authform {
+  width: 100%;
+  border: 1px solid gray;
+  max-width: 50%;
+  margin-top: -230px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  gap: 10px;
+  padding: 10px;
+}
+.authform input {
+  width: 100%;
+  max-width: 55%;
+  height: 1.4rem;
+}
+.authform label {
+  width: 100%;
+  max-width: 55%;
+  font-weight: 400;
+}
+.btn-submit button {
+  cursor: pointer;
+}
+.firm-section,
+.product-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.firm-form,
+.product-form {
+  width: 100%;
+  border: 1px solid gray;
+  max-width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  gap: 10px;
+  padding: 10px;
+}
+.firm-form input,
+.product-form input {
+  width: 100%;
+  max-width: 55%;
+  height: 1.4rem;
+}
+.firm-form label,
+.product-form label {
+  width: 100%;
+  max-width: 55%;
+  font-weight: 400;
+}
+.firm-form button,
+.product-form button {
+  cursor: pointer;
+}
+.category-container {
+  display: flex;
+  flex-direction: column;
+  width: 55%;
+}
+.input-checkbox-container {
+  margin-top: 5px;
+  display: flex;
+}
+.checkbox-container {
+  display: flex;
+  width: 50%;
+  align-items: center;
+}
+.checkbox-container input {
+  margin-left: -60px;
+}
+.input-checkbox-container.region-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 100%;
+}
+.input-checkbox-container.region-container .checkbox-container {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+.input-checkbox-container.region-container .checkbox-container label {
+  width: 100%;
+  margin-right: 20px;
+}
