@@ -133,3 +133,19 @@ body {
   width: 100%;
   margin-right: 20px;
 }
+.table-products {
+  width: 80vw;
+  border: 2px solid blue;
+  margin: 0 auto;
+  margin-top: 150px;
+  border-collapse: collapse;
+}
+.table-products tr,
+.table-products th,
+.table-products td {
+  border: 1px solid gray;
+}
+td button {
+  cursor: pointer;
+  background-color: orangered;
+}

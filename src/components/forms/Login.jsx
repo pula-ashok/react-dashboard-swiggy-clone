@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { API_PATH } from "../../data/apiPath";
 
-const Login = () => {
+const Login = ({ showWelcomeHandler, setShowLogout, showFirmTitle }) => {
   const [loginData, setLoginData] = useState({
     email: "",
     password: "",
@@ -19,12 +19,23 @@ const Login = () => {
       const data = await response.json();
       if (response.ok) {
         alert("login success");
-        console.log(data);
         localStorage.setItem("logintoken", JSON.stringify(data.token));
         setLoginData({
           email: "",
           password: "",
         });
+        showWelcomeHandler();
+        setShowLogout(true);
+      }
+      const vendorId = data.vendorId;
+      const vendorResponse = await fetch(
+        `${API_PATH}/vendor/single-vendor/${vendorId}`
+      );
+      const vendorData = await vendorResponse.json();
+      console.log(vendorData);
+      if (vendorResponse.ok) {
+        localStorage.setItem("firmId", JSON.stringify(vendorData.firmId));
+        localStorage.setItem("firmName", JSON.stringify(vendorData.firmName));
       }
     } catch (error) {
       alert("login failed");

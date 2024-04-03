@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { API_PATH } from "./../../data/apiPath";
 
-const Register = () => {
+const Register = ({ showLoginHandler }) => {
   const [registerData, setRegisterData] = useState({
     username: "",
     email: "",
@@ -25,6 +25,7 @@ const Register = () => {
           email: "",
           password: "",
         });
+        showLoginHandler();
       }
     } catch (error) {
       console.log(error);

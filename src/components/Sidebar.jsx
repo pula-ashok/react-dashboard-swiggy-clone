@@ -1,12 +1,18 @@
 import React from "react";
 
-const Sidebar = ({ showFirmHandler, showProductHandler }) => {
+const Sidebar = ({
+  showFirmHandler,
+  showProductHandler,
+  showAllProductsHandler,
+  showFirmTitle,
+}) => {
+  console.log("showFirmtitle", showFirmTitle);
   return (
     <div className="sidbar-section">
       <ul>
-        <li onClick={() => showFirmHandler()}>Add Firm</li>
+        {showFirmTitle && <li onClick={() => showFirmHandler()}>Add Firm</li>}
         <li onClick={() => showProductHandler()}>Add Product</li>
-        <li>All Products</li>
+        <li onClick={() => showAllProductsHandler()}>All Products</li>
         <li>User Details</li>
       </ul>
     </div>
